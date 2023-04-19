@@ -1,0 +1,24 @@
+<section class="skills mastered js-scroll">
+	<h2>Mastered Skills</h2>
+	<small>// These are skills I have used proficiently in large-scale projects.</small>
+	<ul>
+		<li *ngFor="let skill of skills.mastered">
+			<figure>
+				<img [src]="'../../../assets/images/icons/' + skill.icon" [alt]="skill.name">
+				<figcaption>{{ skill.name }}</figcaption>
+			</figure>
+		</li>
+	</ul>
+</section>
+<section class="skills supplementary js-scroll">
+	<h2>Supplementary Skills</h2>
+	<small>// I have experience in these, but not as much</small>
+	<ul>
+		<li *ngFor="let skill of skills.supplementary">
+			<figure>
+				<img [src]="'../../../assets/images/icons/' + skill.icon" [alt]="skill.name">
+				<figcaption>{{ skill.name }}</figcaption>
+			</figure>
+		</li>
+	</ul>
+</section>

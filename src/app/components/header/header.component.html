@@ -1,0 +1,16 @@
+<header>
+	<div class="logo-and-subtitle">
+		<div class="brand-name">Elias Murcray</div>
+		<div *ngIf="router.url === '/'" class="header-subtext">
+			Professional Frontend Developer
+		</div>
+	</div>
+	<div class="button-outer">
+		<button id="mobile-nav-button" (click)="toggle($event)">
+			<svg width="35" height="35" viewBox="0 0 100 100" fill="#0000" stroke="#000" stroke-width="5" stroke-linecap="round"><path class="line1" d="M20 30H80L80 80L20 20"></path><path class="line2" d="M20 50H80"></path><path class="line3" d="M20 70H80L80 20L20 80"></path></svg>
+		</button>
+	</div>
+</header>
+<nav class="nav" *ngIf="toggled">
+	<app-links></app-links>
+</nav>
