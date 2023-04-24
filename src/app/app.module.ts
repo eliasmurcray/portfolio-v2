@@ -6,22 +6,33 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { LinksComponent } from './components/links/links.component';
 import { IndexComponent } from './components/index/index.component';
-import { HeroComponent } from './components/hero/hero.component';
-import { AboutComponent } from './components/about/about.component';
+import { HeroSectionComponent } from './components/hero-section/hero-section.component';
+import { AboutSectionComponent } from './components/about-section/about-section.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { SkillsComponent } from './components/skills/skills.component';
+import { SkillsSectionComponent } from './components/skills-section/skills-section.component';
 import { APP_BASE_HREF } from '@angular/common';
+import { ProjectsComponent } from './components/projects/projects.component';
+import { AboutComponent } from './components/about/about.component';
 
 const routes: Routes = [
   {
-    path: '/',
+    path: '',
     component: IndexComponent
   },
   {
-    path: '/contact',
+    path: 'contact',
     component: ContactComponent
-  }
+  },
+  {
+    path: 'about',
+    component: AboutComponent
+  },
+  {
+    path: 'projects',
+    component: ProjectsComponent
+  },
+  { path: '**', redirectTo: '' }
 ];
 
 @NgModule({
@@ -30,11 +41,13 @@ const routes: Routes = [
     HeaderComponent,
     LinksComponent,
     IndexComponent,
-    HeroComponent,
-    AboutComponent,
+    HeroSectionComponent,
+    AboutSectionComponent,
     ContactComponent,
     FooterComponent,
-    SkillsComponent
+    SkillsSectionComponent,
+    ProjectsComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

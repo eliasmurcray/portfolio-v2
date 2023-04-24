@@ -13,7 +13,6 @@ export class LinksComponent {
     this.router.navigate([path]);
 
     const button = document.getElementById("mobile-nav-button");
-    console.log(button);
     button?.click();
   }
 }

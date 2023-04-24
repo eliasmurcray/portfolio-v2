@@ -1,84 +1,35 @@
-section.about {
-	background: linear-gradient(var(--layer-1), var(--layer-2));
+h1 {
+	font-size: 2.4rem;
+	font-weight: 500;
+	text-align: center;
+	text-transform: uppercase;
+}
 
-	&.scrolled .about-inner {
-		h2 {
-			animation: slide-up .8s ease-in-out forwards;
-		}
+.content {
+	display: flex;
+	flex-flow: column-reverse;
+	max-width: 950px;
+	margin: 0 auto;
 
-		img {
-			animation: slide-up .8s .2s ease-in-out forwards;
-		}
-
-		p {
-			animation: slide-up .8s .4s ease-in-out forwards;
-		}
+	@media screen and (min-width: 850px) {
+		flex-flow: row;
 	}
 
-	.about-inner {
-		padding: var(--gutter-size);
-		max-width: 970px;
+	section.about {
+		padding: 0 var(--gutter-size);
 		margin: 0 auto;
+		width: 100%;
+		flex: 1;
 		box-sizing: border-box;
-
-		h2 {
-			@media screen and (max-width: 850px) {
-				font-size: 2.2rem;
-				line-height: 3rem;
-
-				.gradient-outer {
-					width: calc(8ch + 20px) !important;
-					height: 60px !important;
-
-					.inner {
-						width: calc(8ch + 20px) !important;
-						height: 60px !important;
-					}
-				}
-			}
-
-			text-transform: uppercase;
-			font-size: 3.4rem;
-			font-weight: 600;
-			line-height: 4.8rem;
-			background-clip: text;
-			-webkit-background-clip: text;
-			background-image: linear-gradient(90deg, var(--light-blue), var(--text-1), #0000 95%);
-			color: #0000;
-			opacity: 0;
-
-			.gradient-outer {
-				background: -webkit-linear-gradient(right bottom, var(--purple-1) 0%, var(--purple-2) 100%);
-				width: calc(6ch + 80px);
-				height: 75px;
-				padding: 2px;
-				border-radius: 40px;
-
-				.inner {
-					width: calc(6ch + 80px);
-					height: 75px;
-					border-radius: 40px;
-					display: grid;
-					place-items: center;
-					background-color: var(--layer-1);
-
-					.text {
-						background-clip: text;
-						-webkit-background-clip: text;
-						background-image: linear-gradient(90deg, var(--light-blue), var(--text-1));
-						color: #0000;
-					}
-				}
-			}
-		}
-
+	}
+	div {
+		flex: 1;
 		img {
-			opacity: 0;
-		}
-
-		p {
-			font-size: min(4vw, 32px);
-			opacity: 0;
+			filter: grayscale(100%);
+			display: block;
+			width: 100%;
+			object-fit: contain;
+			object-position: top;
 		}
 	}
 }

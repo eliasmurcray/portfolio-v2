@@ -1,6 +1,6 @@
 <ul>
 	<li (click)="navigateTo('/')"><a routerLink="/">/</a></li>
-	<li><a routerLink="/projects">/projects</a></li>
-	<li><a routerLink="/about">/contact</a></li>
+	<li (click)="navigateTo('/about')"><a routerLink="/about">/about</a></li>
+	<li (click)="navigateTo('/projects')"><a routerLink="/projects">/projects</a></li>
 	<li class="start-project" (click)="navigateTo('/contact')"><a routerLink="/contact">Start A Project?</a></li>
 </ul>

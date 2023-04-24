@@ -1,18 +1,18 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-skills',
-  templateUrl: './skills.component.html',
-  styleUrls: ['./skills.component.scss']
+  selector: 'app-skills-section',
+  templateUrl: './skills-section.component.html',
+  styleUrls: ['./skills-section.component.scss']
 })
-export class SkillsComponent {
+export class SkillsSectionComponent {
   skills = {
     mastered: [{
       name: "HTML",
-      icon: "html5.png"
+      icon: "html.png"
     }, {
       name: "CSS",
-      icon: "css3.png"
+      icon: "css.png"
     }, {
       name: "JavaScript",
       icon: "javascript.png"
@@ -48,7 +48,7 @@ export class SkillsComponent {
       icon: "chrome-extensions.png"
     }, {
       name: "Express",
-      icon: "express.webp"
+      icon: "express.png"
     }],
     supplementary: [
       {
@@ -65,7 +65,7 @@ export class SkillsComponent {
       },
       {
         name: "Firefox Addons",
-        icon: "firefox-addons.jpeg"
+        icon: "firefox-addons.png"
       },
       {
         name: "Microsoft Azure",
@@ -74,6 +74,10 @@ export class SkillsComponent {
       {
         name: "PineScript",
         icon: "pinescript.png"
+      },
+      {
+        name: "Raspberry Pi",
+        icon: "raspberry-pi.png"
       }
     ]
   };

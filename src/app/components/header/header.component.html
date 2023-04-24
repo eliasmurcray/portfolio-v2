@@ -1,7 +1,7 @@
 <header>
 	<div class="logo-and-subtitle">
-		<div class="brand-name">Elias Murcray</div>
-		<div *ngIf="router.url === '/'" class="header-subtext">
+		<div class="brand-name" (click)="navigateTo('/')">Elias Murcray</div>
+		<div *ngIf="router.url.split('?')[0] === '/'" class="header-subtext">
 			Professional Frontend Developer
 		</div>
 	</div>
@@ -11,6 +11,6 @@
 		</button>
 	</div>
 </header>
-<nav class="nav" *ngIf="toggled">
+<nav class="nav" id="mobile-nav">
 	<app-links></app-links>
 </nav>
