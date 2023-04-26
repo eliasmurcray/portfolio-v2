@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { LinksComponent } from './components/links/links.component';
@@ -14,23 +13,25 @@ import { SkillsSectionComponent } from './components/skills-section/skills-secti
 import { APP_BASE_HREF } from '@angular/common';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { AboutComponent } from './components/about/about.component';
+import { SeoService } from './services/seo.service';
+import { RecaptchaModule } from 'ng-recaptcha';
 
 const routes: Routes = [
   {
     path: '',
-    component: IndexComponent
+    loadChildren: () => import('./modules/index/index.module').then(m => m.IndexModule)
   },
   {
     path: 'contact',
-    component: ContactComponent
+    loadChildren: () => import('./modules/contact/contact.module').then(m => m.ContactModule)
   },
   {
     path: 'about',
-    component: AboutComponent
+    loadChildren: () => import('./modules/about/about.module').then(m => m.AboutModule)
   },
   {
     path: 'projects',
-    component: ProjectsComponent
+    loadChildren: () => import('./modules/projects/projects.module').then(m => m.ProjectsModule)
   },
   { path: '**', redirectTo: '' }
 ];
@@ -51,9 +52,13 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
+    RecaptchaModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [ { provide: APP_BASE_HREF, useValue: './' } ],
+  providers: [
+    { provide: APP_BASE_HREF, useValue: './' },
+    SeoService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

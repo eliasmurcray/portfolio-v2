@@ -6,10 +6,10 @@
 		<p>I started out programming as a beginner, and as time went on people started paying me for it. Speaking of which, you can <a routerLink="/contact">hire me</a> for your next project!</p>
 		<h2>My Goals</h2>
 		<p>My goal is always to be learning as much as possible through application of trendy and useful skills in a large scale project. I think that this level of stress will cause me to learn a ton at once.</p>
-		<h2>Other Hobbies</h2>
-		<p>This is the "I'm not a robot" section. I am a Christian! I like to do other things besides coding such as playing chess, listening to classical music (Vivaldi is my favorite), and playing Legend of Zelda.</p>
+		<h2>I'm Not A Robot</h2>
+		<p>I am a Christian! I like to do other things besides coding such as playing chess, listening to classical music (Vivaldi is my favorite), and playing Legend of Zelda.</p>
 	</section>
 	<div>
-		<img src="../../../assets/images/me-in-hoodie-low-res.webp" onload="() => {this.onload = null;this.src='../../../assets/images/me-in-hoodie.webp';}" alt="Me in a hoodie" width="100%" height="100%">
+		<img src="../../../assets/images/me-in-hoodie-low-res.webp" (load)="isLoaded ? '' : lazyLoad($event)" alt="Me in a hoodie" width="100%" height="100%">
 	</div>
 </div>
